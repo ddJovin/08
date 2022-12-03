@@ -23,8 +23,8 @@ document.getElementById('btnRetry').addEventListener('click', function () {
     orderNumber = 1;
     if(!gameRun){
         gameRun = true;
-        minValue = parseInt(prompt('Минимальное знание числа для игры','0'));
-        maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+        minValue = parseInt(prompt('Минимальное значение числа для игры (не менее -999 и не более 999)','0'));
+        maxValue = parseInt(prompt('Максимальное значение числа для игры (не менее -999 и не более 999)','100'));
         minValue > 999 ? minValue = 999 : minValue < -999 ? minValue = -999 : Number.isInteger(minValue) ? minValue : minValue = 0;
         maxValue > 999 ? maxValue = 999 : maxValue < -999 ? maxValue = -999 : Number.isInteger(maxValue) ? maxValue : maxValue = 100;
         answerNumber  = Math.floor((minValue + maxValue) / 2);
