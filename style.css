@@ -1,4 +1,21 @@
 .game-card {
-  height: 100vh;
-  font-family: "Open Sans", monospace;
+    height: 100vh;
+    font-family: "Open Sans", monospace;
+
+}
+
+.card{
+    border-radius: 35%;
+    border-style: none;
+    background-color: rgb(127, 221, 127)
+}
+
+.card-header{
+    border-style: none;
+    background: transparent;
+}
+
+.card-footer{
+    border-style: none;
+    background: transparent;
 }
