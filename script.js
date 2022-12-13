@@ -30,6 +30,10 @@ document.getElementById('btnRetry').addEventListener('click', function () {
         maxValue = parseInt(prompt('Максимальное значение числа для игры (не менее -999 и не более 999)','100'));
         minValue > 999 ? minValue = 999 : minValue < -999 ? minValue = -999 : Number.isInteger(minValue) ? minValue : minValue = 0;
         maxValue > 999 ? maxValue = 999 : maxValue < -999 ? maxValue = -999 : Number.isInteger(maxValue) ? maxValue : maxValue = 100;
+        if(minValue>maxValue){
+            [minValue, maxValue] = [maxValue, minValue];
+        };
+        alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
         answerNumber  = Math.floor((minValue + maxValue) / 2);
         orderNumberField.innerText = orderNumber;
         let text = [`Да это легко! Ты загадал... ${answerNumber }`, `Да это же ${answerNumber }`, `Я думаю, это ${answerNumber }`];
